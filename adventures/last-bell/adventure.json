@@ -1,0 +1,416 @@
+{
+  "schema_version": 2,
+  "kind": "adventure",
+  "id": "last-bell",
+  "format": "diceframe:adventure-graph-v2",
+  "source_ref": "diceframe-original:coc-last-bell",
+  "automation_level": "guided",
+  "name": "最后一记钟声",
+  "summary": "钟楼停摆十五年后敲了十三下。每一下，都有一个人忘记自己有过孩子——包括你的姐姐。",
+  "estimated_minutes": 120,
+  "player_count": 3,
+  "chapters": [
+    {
+      "id": "arrival",
+      "name": "第一章：灰窑镇"
+    },
+    {
+      "id": "rules",
+      "name": "第二章：规矩"
+    },
+    {
+      "id": "finale",
+      "name": "第三章：第十三下"
+    }
+  ],
+  "start_node_ids": [
+    "arrival"
+  ],
+  "nodes": [
+    {
+      "id": "arrival",
+      "type": "scene",
+      "chapter_id": "arrival",
+      "visibility": "public",
+      "name": "灰窑镇的寻人墙",
+      "description": "镇公所外的木墙上贴满寻人启事，纸张层层叠叠。奇怪的是每张启事上孩子的脸都被刮掉了，刮得很仔细，只留身体和衣服。墙下蹲着一个男人，正在往启事上补写名字，写一个，停一下，像是在确认这个字对不对。他抬头看你们：「你们也听见了？十一下了。我数着的。」",
+      "transitions": [
+        {
+          "to": "sister_house"
+        }
+      ]
+    },
+    {
+      "id": "sister_house",
+      "type": "scene",
+      "chapter_id": "arrival",
+      "visibility": "public",
+      "name": "姐姐家的阁楼",
+      "description": "姐姐玛格丽特坚持家里没有孩子。她说这话时在擦一个不脏的杯子，擦了四遍。\n\n但阁楼有一间布置完整的儿童房：小床（被子掀开一角）、刻着身高的门框（三条横线，最高到 104 厘米，旁边标着日期，最近一个是 1926 年 6 月）、一盒蜡笔、一双小鞋（鞋尖朝床）。\n\n蜡笔盒里有一张纸，画着三个人牵手，第三个被反复涂黑，涂到纸都破了。\n\n玛格丽特看见这张纸时手抖了一下，然后说：「这是以前房客留下的。」\n\n她从没出租过房子。\n\n窗外，钟又响了一下。她数了一声「十一」，然后停住，问：「前面是几下？」",
+      "transitions": [
+        {
+          "to": "margaret_house"
+        },
+        {
+          "to": "bell_tower_day"
+        }
+      ]
+    },
+    {
+      "id": "bell_tower_day",
+      "type": "scene",
+      "chapter_id": "rules",
+      "visibility": "public",
+      "name": "钟楼机械室",
+      "description": "钟楼在教堂后面，木梯五十三级，每一级刻一个年份，从 1771 到 1926，中间缺了 1911 到 1925——那十五年没人上去过，也就没人刻。\n\n机械室里有一根粗麻绳，绳上打着结，每个结缝着一小片羊皮，上面是名字。这是「换名」的记录：每换一次，打一个结。\n\n绳子末端有十三个新结，其中十二个已经磨得发亮——每磨亮一个，就有一个人忘记了孩子。\n\n墙上钉着修钟匠埃利亚斯·索恩的日志，大部分页面被撕了，最后一页只写了一句：「我不刻。让它自己敲。」\n\n日志旁边有一把刻刀，刀刃上有干掉的铜屑。\n\n（如果玩家数结：一共一百零七个。如果数年份：155 年，每十五年一次，应该是十个。多出来的那些，是「补账」。）",
+      "transitions": [
+        {
+          "to": "sexton"
+        },
+        {
+          "to": "belfry"
+        }
+      ]
+    },
+    {
+      "id": "sexton",
+      "type": "decision",
+      "chapter_id": "rules",
+      "visibility": "public",
+      "name": "守钟人托马斯",
+      "description": "托马斯·索恩是埃利亚斯的儿子，五十一岁，右手少了两根手指。他坐在钟楼下的石阶上等你们，像是等了很久。他承认钟在「换名」：敲满十三下，钟会自己选一个新的守钟人，被选中的人要走进钟室，把自己的名字刻在钟内壁，然后留在里面——十五年后由下一个人替。他说：「我父亲拒绝了，所以钟自己敲了十五年。今晚是第十三下。」他给你们两个选择：听他讲完规矩，或者现在就去钟室看内壁。",
+      "choice_mode": "exclusive",
+      "transitions": [
+        {
+          "to": "the_rules",
+          "choice_id": "hear_him",
+          "choice_label": "先听他讲完规矩"
+        },
+        {
+          "to": "belfry",
+          "choice_id": "go_up_now",
+          "choice_label": "现在上钟室"
+        }
+      ]
+    },
+    {
+      "id": "the_rules",
+      "type": "scene",
+      "chapter_id": "rules",
+      "visibility": "public",
+      "name": "索恩家的规矩",
+      "description": "托马斯说得很慢，像在背一段他背了很多年的东西。\n\n钟是 1771 年从一艘教堂船上拆下来的。钟体内壁有十三个名字，是历代守钟人。钟「满」了就要换名：用一个新的名字替掉最旧的一个，村子再保十五年。\n\n不换会怎样？钟自己收。它收的不是人，是「有人记得你」这件事。被收走的孩子还在镇上，只是没人认得出他——包括他自己的父母。\n\n「我父亲不是摔死的。」托马斯说，「他是把钟弄哑了。用一根绳子。他拉了十五年。」\n\n他把一把铜钥匙放在你们手里：「我不刻。我父亲不刻。你们要是也不刻，今晚就是最后一记。」\n\n（他没说的是：他每个月去教堂登记簿上给新生儿写自己的名字当教父母。他在替这些孩子「占位」，让他们至少有个记得他们的人。）",
+      "transitions": [
+        {
+          "to": "chapel_records"
+        },
+        {
+          "to": "belfry"
+        }
+      ]
+    },
+    {
+      "id": "belfry",
+      "type": "scene",
+      "chapter_id": "finale",
+      "visibility": "public",
+      "name": "钟室",
+      "description": "钟室只有一扇百叶窗，风把石灰粉吹成一层薄雾，落在所有东西上。\n\n钟体内壁刻着十三个名字。第十二个是「埃利亚斯·索恩」。第十三个位置已经磨平，等着被刻——那个位置的大小，正好是一个名字。\n\n钟舌上缠着一根不属于这里的红绳，绳头顺着百叶窗垂到楼板下，一直垂到外墙的铁环。铁环上刻着 1911。\n\n十一点差三分，钟开始自己晃。不是风，是那种「有重量在里面移动」的晃。\n\n楼下传来玛格丽特的声音，她在叫一个名字——你们听不清，但她自己听见了。\n\n（红绳是埃利亚斯的办法：拉紧，钟就哑。十五年来，每次钟想响，就有人拉一次。绳上十三处磨损，就是十三次。）",
+      "transitions": [
+        {
+          "to": "the_thirteenth"
+        }
+      ]
+    },
+    {
+      "id": "the_thirteenth",
+      "type": "decision",
+      "chapter_id": "finale",
+      "visibility": "public",
+      "name": "第十三下之前",
+      "description": "十一点整，钟敲了第十二下。\n\n楼下，玛格丽特在叫一个名字。你们听不清那个名字，但她自己听见了——于是停住，捂住嘴，然后开始哭，一边哭一边说：「我不知道我在叫谁。」\n\n你们只有这一下的时间。四个选择：\n\n割断钟舌上的红绳——钟会响第十三下，钟自己收走第十三个。\n自己走进钟室，把名字刻在第十三个位置——替村子再保十五年。\n把被收走那个孩子的名字刻回内壁——让钟认账，一换一。\n什么都不做——让它敲完。",
+      "choice_mode": "exclusive",
+      "transitions": [
+        {
+          "to": "ending_silence",
+          "choice_id": "cut_the_thread",
+          "choice_label": "割断红绳，让钟哑掉"
+        },
+        {
+          "to": "ending_keeper",
+          "choice_id": "carve_your_name",
+          "choice_label": "把自己的名字刻上去"
+        },
+        {
+          "to": "ending_restore",
+          "choice_id": "carve_the_child_back",
+          "choice_label": "把孩子的名字刻回去"
+        },
+        {
+          "to": "ending_none",
+          "choice_id": "do_nothing",
+          "choice_label": "什么都不做，让它敲完"
+        }
+      ]
+    },
+    {
+      "id": "ending_silence",
+      "type": "ending",
+      "chapter_id": "finale",
+      "visibility": "public",
+      "name": "结局：哑掉的钟",
+      "description": "红绳断了，钟晃了一下，没有响。灰窑镇保住了所有还剩下的记忆，但钟从此不再「换名」——它只是停在那里，内壁第十三个位置空着。玛格丽特在楼下站了很久，最后说：「我好像忘了一件很重要的事，但我想不起来是什么。」镇上另外十一个人也在同一天露出同样的表情。钟不响了，代价是这一代人永远缺一块。",
+      "transitions": []
+    },
+    {
+      "id": "ending_keeper",
+      "type": "ending",
+      "chapter_id": "finale",
+      "visibility": "public",
+      "name": "结局：第十三个名字",
+      "description": "你们中的一个走进钟室，用托马斯的刻刀在内壁刻下自己的名字。钟没有敲第十三下——它不需要了。被收走的孩子当晚回家，玛格丽特在门口抱住他，哭得说不出话。留下的人留在钟室里，成为新的守钟人：十五年内，镇上每个人都会记得他；十五年后，会有人上来替他。托马斯在楼下磕了一个头，然后走了。",
+      "transitions": []
+    },
+    {
+      "id": "ending_restore",
+      "type": "ending",
+      "chapter_id": "finale",
+      "visibility": "public",
+      "name": "结局：一换一",
+      "description": "孩子的名字被刻回内壁，钟认了这笔账，但账要平：最旧的那个名字——1771 年的第一位守钟人——被彻底磨掉，连同所有关于他的记忆。镇上再没有人知道这座钟是谁造的、为什么造。孩子回来了，玛格丽特记起了他，可她在给孩子讲睡前故事时，总会卡在开头那两句上，怎么也想不起来。",
+      "transitions": []
+    },
+    {
+      "id": "margaret_house",
+      "type": "scene",
+      "chapter_id": "arrival",
+      "visibility": "public",
+      "name": "四副碗筷",
+      "description": "正屋比阁楼更能说明问题。\n\n桌上摆着四副碗筷，其中一副是小碗、小勺，筷子是短的儿童筷。碗里有饭，已经凉了。\n\n冰箱里有一盒儿童维生素，开了封，吃了半盒。日历上 6 月 14 日画了一个圈，写着「生日」，字迹被涂改过三次。\n\n门框上有三道身高刻痕，最高那道旁边写着「七岁」。\n\n最要紧的是相框：全家福四个人，其中一个被剪掉了。玻璃上有一层指印，围着那个空位，像有人反复摸过。\n\n玛格丽特站在门口，看着你们看这些东西。她说：「我不知道为什么会摆四副碗筷。我就是……习惯了。」\n\n（她真的不知道。这是钟的效果：它不删记忆，它让记忆「对不上」。）",
+      "transitions": [
+        {
+          "to": "lime_kilns"
+        },
+        {
+          "to": "bell_tower_day"
+        }
+      ]
+    },
+    {
+      "id": "lime_kilns",
+      "type": "scene",
+      "chapter_id": "arrival",
+      "visibility": "public",
+      "name": "三号窑的班表",
+      "description": "窑口热浪扑面，工人赤膊，脸上全是白灰，只看得见眼睛。\n\n班表钉在窑口木板上，三班，每班六个人名。但你们数了数在场的人，只有十四个。\n\n工头姓贝克，他说：「班表上有几个是老名字，忘了划掉。」\n\n可班表是今年的新纸。\n\n工钱账更能说明问题：过去半个月，领工钱的比在册的多三个人。钱照发，没人来领。贝克把那些钱存进一个铁盒，说「等他们来拿」。\n\n铁盒里有三份钱，用纸包着，纸上写着三个名字。\n\n（那三个名字，和教堂登记簿、镇公所启事能对上。三个孩子就在镇上，在窑上干活，工头认不出他们，但按班表给他们发钱。）",
+      "transitions": [
+        {
+          "to": "bell_tower_day"
+        }
+      ]
+    },
+    {
+      "id": "chapel_records",
+      "type": "scene",
+      "chapter_id": "rules",
+      "visibility": "public",
+      "name": "受洗登记簿",
+      "description": "教堂后殿的石碑上刻着 1771 年的捐资人名单，第一个名字被磨掉了，磨得很深。\n\n受洗登记簿摊在圣器室桌上，七代人的笔迹。你们要查的是：过去十五年，哪些孩子「有人记得」。\n\n答案在「教父母」一栏。最近三年，十一个婴儿的教父母都是「托马斯·索恩」——他没有孩子，也不是神职人员。他在替这些孩子占位，让他们在登记簿上至少有一个记得他们的人。\n\n登记簿最后夹着一张折起来的纸，是托马斯写的名单：十一个名字，四个划掉。划线很轻，像是下不了手。\n\n（四个划掉的，就是已经被收走的。剩下七个，还来得及。）",
+      "transitions": [
+        {
+          "to": "missing_child"
+        },
+        {
+          "to": "belfry"
+        }
+      ]
+    },
+    {
+      "id": "missing_child",
+      "type": "scene",
+      "chapter_id": "rules",
+      "visibility": "public",
+      "name": "门口站着的男孩",
+      "description": "从教堂出来，天已经黑了。玛格丽特家门口站着一个男孩，七岁，灰蓝色外套，没有敲门。\n\n他站着，看着门，看了一会儿，转身要走。\n\n如果你们叫住他，他会说：「我妈今天又不认识我了。」语气很平静，像在说天气。\n\n他的外套袖口磨破了，手上有石灰，鞋是旧的，但系得很整齐——有人教过他系鞋带，那个人已经不记得教过。\n\n他不会求救，不会哭。他只是说：「我等她明天。」\n\n（这是全场最重的一个 NPC。不要让他哭。让他接受这件事，才最难受。）",
+      "transitions": [
+        {
+          "to": "belfry"
+        }
+      ]
+    },
+    {
+      "id": "ending_none",
+      "type": "ending",
+      "chapter_id": "finale",
+      "visibility": "public",
+      "name": "结局：第十三下",
+      "description": "你们什么都没做。\n\n钟敲了第十三下。声音很轻，不像前十二下那么响，像是有意收着。\n\n第二天早上，镇上少了十三个人的记忆中的孩子。第十三个是玛格丽特的。\n\n她照常起床，照常做早饭，做了两份。她坐在桌边，看着对面那个空位，看了很久，然后把多的那份倒进了垃圾桶。\n\n她一辈子都不会知道自己为什么每天早上都会多做一个人的饭。\n\n钟楼的门锁上了。托马斯把钥匙扔进了石灰窑。\n\n（这个结局不是失败。它是「什么都不做」的代价。守秘人应当如实描述，不要加评判。）",
+      "transitions": []
+    }
+  ],
+  "objectives": [
+    {
+      "id": "why_forget",
+      "name": "查明镇上的人为什么会忘记孩子",
+      "visibility": "public",
+      "node_ids": [
+        "sister_house",
+        "margaret_house",
+        "lime_kilns",
+        "belfry"
+      ]
+    },
+    {
+      "id": "who_is_keeper",
+      "name": "弄清守钟人这一角色",
+      "visibility": "public",
+      "node_ids": [
+        "bell_tower_day",
+        "sexton",
+        "the_rules"
+      ]
+    },
+    {
+      "id": "find_the_child",
+      "name": "找到那个还在镇上的孩子",
+      "visibility": "public",
+      "node_ids": [
+        "chapel_records",
+        "missing_child"
+      ]
+    },
+    {
+      "id": "stop_the_thirteenth",
+      "name": "在第十三下之前做出选择",
+      "visibility": "public",
+      "node_ids": [
+        "the_thirteenth"
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "id": "saw_empty_frame",
+      "name": "看见被剪掉一个人的全家福",
+      "visibility": "public",
+      "node_ids": [
+        "sister_house",
+        "margaret_house"
+      ]
+    },
+    {
+      "id": "read_the_rules",
+      "name": "听完托马斯的规矩",
+      "visibility": "public",
+      "node_ids": [
+        "the_rules"
+      ]
+    },
+    {
+      "id": "found_the_list",
+      "name": "拿到十一人名单",
+      "visibility": "public",
+      "node_ids": [
+        "chapel_records"
+      ]
+    },
+    {
+      "id": "saw_the_boy",
+      "name": "见到那个还在等妈妈认出他的男孩",
+      "visibility": "public",
+      "node_ids": [
+        "missing_child"
+      ]
+    },
+    {
+      "id": "made_the_choice",
+      "name": "在第十三下之前决定",
+      "visibility": "public",
+      "node_ids": [
+        "the_thirteenth"
+      ]
+    }
+  ],
+  "world_seed": {
+    "entities": [
+      {
+        "entity_id": "location:ashkiln",
+        "kind": "location"
+      },
+      {
+        "entity_id": "location:bell_tower",
+        "kind": "location"
+      },
+      {
+        "entity_id": "npc:thomas_thorne",
+        "kind": "npc"
+      },
+      {
+        "entity_id": "location:chapel",
+        "kind": "location"
+      },
+      {
+        "entity_id": "location:kiln",
+        "kind": "location"
+      },
+      {
+        "entity_id": "npc:the_child",
+        "kind": "npc"
+      },
+      {
+        "entity_id": "item:register",
+        "kind": "item"
+      },
+      {
+        "entity_id": "item:red_thread",
+        "kind": "item"
+      }
+    ],
+    "relations": [
+      {
+        "relation_id": "town-to-tower",
+        "kind": "connects",
+        "from_ref": "location:ashkiln",
+        "to_ref": "location:bell_tower"
+      }
+    ],
+    "facts": [
+      {
+        "key": "public:bell.count",
+        "value": "昨夜到今早敲了十二下，第十三是今晚十一点",
+        "visibility": "public"
+      },
+      {
+        "key": "gm:bell.mechanism",
+        "value": "钟收的不是人，是「有人记得你」这件事。被收走的孩子仍在镇上，只是没人认得出。",
+        "visibility": "gm"
+      },
+      {
+        "key": "gm:thorne.fear",
+        "value": "托马斯右手的两根手指是 1911 年自己砍的，为了不当守钟人。他知道今晚钟会选他，因为索恩家的血算「旧名」。",
+        "visibility": "gm"
+      },
+      {
+        "key": "gm:bell.mechanism",
+        "value": "钟收的不是人，是「有人记得你」这件事；被收走的孩子仍在镇上，只是没人认得出。",
+        "visibility": "gm"
+      },
+      {
+        "key": "gm:elias.silenced",
+        "value": "埃利亚斯不是摔死，他用红绳把钟弄哑了十五年；红绳另一端系在 1911 年装的铁环上。",
+        "visibility": "gm"
+      },
+      {
+        "key": "gm:thomas.stands",
+        "value": "托马斯在受洗登记簿上给十一个婴儿当教父母，替他们占位，让他们至少有个记得他们的人。",
+        "visibility": "gm"
+      },
+      {
+        "key": "gm:faces.scraped",
+        "value": "启事上的脸是家长自己刮的：他们记不住孩子的脸，只觉得「这张纸上有地方不对」。",
+        "visibility": "gm"
+      }
+    ],
+    "processes": []
+  }
+}

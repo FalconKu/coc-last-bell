@@ -1,0 +1,17 @@
+{
+  "id": "chapel",
+  "name": "圣阿洛伊修斯教堂",
+  "world_id": "ashkiln",
+  "connected_to": [
+    "margaret_house",
+    "tower"
+  ],
+  "content": "1771 年石碑第一个名字被磨掉。受洗登记簿教父母栏大量空白，近三年十一个写托马斯。",
+  "keywords": [
+    "教堂",
+    "登记簿",
+    "石碑",
+    "神父"
+  ],
+  "tier": "background"
+}

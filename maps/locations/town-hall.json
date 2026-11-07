@@ -1,0 +1,17 @@
+{
+  "id": "town_hall",
+  "name": "镇公所与寻人墙",
+  "world_id": "ashkiln",
+  "connected_to": [
+    "margaret_house",
+    "kiln"
+  ],
+  "content": "木墙贴满启事，每张孩子的脸都被刮掉，刮得很细。墙下男人在补写名字，写一个停一下。",
+  "keywords": [
+    "镇公所",
+    "启事",
+    "墙",
+    "名字"
+  ],
+  "tier": "background"
+}

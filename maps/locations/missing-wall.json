@@ -1,0 +1,17 @@
+{
+  "id": "missing_wall",
+  "name": "街角",
+  "world_id": "ashkiln",
+  "connected_to": [
+    "margaret_house",
+    "church_steps"
+  ],
+  "content": "傍晚常有个七岁男孩站在玛格丽特家门口，不敲门，站一会儿就走。",
+  "keywords": [
+    "男孩",
+    "街角",
+    "等待",
+    "外套"
+  ],
+  "tier": "background"
+}

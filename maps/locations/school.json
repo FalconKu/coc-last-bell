@@ -1,0 +1,17 @@
+{
+  "id": "school",
+  "name": "镇小学",
+  "world_id": "ashkiln",
+  "connected_to": [
+    "kiln",
+    "sexton_house"
+  ],
+  "content": "一间教室。点名册上有几个名字没人应，老师照念。墙上贴孩子画的钟。",
+  "keywords": [
+    "学校",
+    "点名册",
+    "孩子",
+    "画"
+  ],
+  "tier": "background"
+}

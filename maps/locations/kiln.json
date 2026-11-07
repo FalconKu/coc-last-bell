@@ -1,0 +1,17 @@
+{
+  "id": "kiln",
+  "name": "三号石灰窑",
+  "world_id": "ashkiln",
+  "connected_to": [
+    "town_hall",
+    "school"
+  ],
+  "content": "班表六人一班只到场十四个。工钱账多三个人，钱存铁盒等他们来拿。",
+  "keywords": [
+    "石灰窑",
+    "班表",
+    "工钱",
+    "白灰"
+  ],
+  "tier": "background"
+}

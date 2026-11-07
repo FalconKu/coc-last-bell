@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "id": "ashkiln-town",
+  "name": "灰窑镇",
+  "mode": "graph",
+  "worlds": [
+    "ashkiln"
+  ],
+  "default": true,
+  "nodes": [
+    {
+      "location_ref": "town_hall",
+      "x": -30,
+      "y": 20
+    },
+    {
+      "location_ref": "margaret_house",
+      "x": -12,
+      "y": 26
+    },
+    {
+      "location_ref": "chapel",
+      "x": 8,
+      "y": 20
+    },
+    {
+      "location_ref": "tower",
+      "x": 20,
+      "y": 10
+    },
+    {
+      "location_ref": "belfry",
+      "x": 20,
+      "y": 0
+    },
+    {
+      "location_ref": "kiln",
+      "x": -34,
+      "y": 0
+    },
+    {
+      "location_ref": "school",
+      "x": -14,
+      "y": 4
+    },
+    {
+      "location_ref": "sexton_house",
+      "x": 2,
+      "y": -2
+    },
+    {
+      "location_ref": "missing_wall",
+      "x": -4,
+      "y": 16
+    }
+  ],
+  "default_view": {
+    "x": 0,
+    "y": 0,
+    "zoom": 1
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "id": "margaret_house",
+  "name": "玛格丽特家",
+  "world_id": "ashkiln",
+  "connected_to": [
+    "town_hall",
+    "chapel"
+  ],
+  "content": "四副碗筷，儿童维生素，门框三道身高刻痕。全家福被剪掉一个人，玻璃上有指印。",
+  "keywords": [
+    "姐姐",
+    "全家福",
+    "碗筷",
+    "儿童房"
+  ],
+  "tier": "core"
+}

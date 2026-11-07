@@ -1,0 +1,16 @@
+{
+  "id": "belfry",
+  "name": "钟室",
+  "world_id": "ashkiln",
+  "connected_to": [
+    "tower"
+  ],
+  "content": "百叶窗吹进石灰粉。钟内壁十三个名字，第十二是埃利亚斯，第十三个磨平待刻。钟舌缠红绳垂到楼板下。",
+  "keywords": [
+    "钟室",
+    "钟",
+    "红绳",
+    "刻刀"
+  ],
+  "tier": "core"
+}

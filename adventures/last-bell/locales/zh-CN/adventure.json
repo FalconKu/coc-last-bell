@@ -1,0 +1,14 @@
+{
+  "locale_schema_version": 1,
+  "locale": "zh-CN",
+  "target": {
+    "kind": "adventure",
+    "id": "last-bell"
+  },
+  "fields": {
+    "tutorial": {
+      "name": "最后一记钟声",
+      "summary": "钟楼停摆十五年后敲了十三下。每一下，都有一个人忘记自己有过孩子——包括你的姐姐。"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "id": "tower",
+  "name": "钟楼",
+  "world_id": "ashkiln",
+  "connected_to": [
+    "chapel",
+    "belfry"
+  ],
+  "content": "五十三级木梯刻着年份，1911–1925 缺刻。机械室麻绳打结缝羊皮，末端十三个结十二个发亮。",
+  "keywords": [
+    "钟楼",
+    "木梯",
+    "麻绳",
+    "日志"
+  ],
+  "tier": "core"
+}

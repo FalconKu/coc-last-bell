@@ -1,0 +1,17 @@
+{
+  "id": "sexton_house",
+  "name": "托马斯家",
+  "world_id": "ashkiln",
+  "connected_to": [
+    "school",
+    "tower"
+  ],
+  "content": "石阶上常坐着托马斯。屋里有十一个纸包，每个写着名字和日期。",
+  "keywords": [
+    "托马斯",
+    "纸包",
+    "石阶",
+    "名字"
+  ],
+  "tier": "background"
+}
