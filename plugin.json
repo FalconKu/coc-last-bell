@@ -8,8 +8,11 @@
   ],
   "id": "coc-last-bell",
   "name": "最后一记钟声",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "《克苏鲁的呼唤》7 版原创短冒险：停摆十五年的钟楼昨夜敲了十三下，每敲一下，镇上就少一个人记得自己的孩子。3 章 15 节点 4 结局，约 2 小时。",
+  "compatible_rulesets": [
+    "coc7"
+  ],
   "plugin_type": "content-pack",
   "content_profile": "adventure-module",
   "content_delivery_mode": "catalog",
